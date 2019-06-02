@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>eBid upload item</title>
+</head>
+<body>
+<style>
+*{
+margin: 0;
+padding: 0;
+font-family: cursive;
+    text-decoration: none;
+
+}
+h1
+{
+    
+    color: #932e19;
+    font-size: 50px;
+    /* font-family: cursive; */
+    font-family: serif;
+    /* text-transform: capitalize; */
+    -webkit-text-emphasis-color: open;
+    -webkit-text-emphasis-color: darkorange;
+    /* -webkit-text-fill-color: #f9faf6; */
+    margin-left: 120px;
+    margin-top: 0px;
+}
+ul{
+float: right;
+list-style-type: none;
+background-color: transparent;
+margin-top: 70px;
+margin-right: 50px;
+}
+
+ul li{
+display: inline-flex;
+font-size: 20px;
+}
+ul li a{
+text-decoration: none;
+color: #fff;
+padding: 5px 20px;
+border: 0.5px solid transparent;
+transition: 0.3s ease;
+}
+ul li a:hover{
+background-color: #fff;
+color: #000;
+border-radius:5px;
+}
+ul li.active a{
+background-color: #FFEC00;
+color: #000;
+}
+#container ul{
+    list-style:none;
+    padding:1px 1px;
+     margin-right: 0px;
+
+    margin-top: 10px;
+    
+}
+#container ul li
+{
+    background-color:transparent;
+    width:153px;
+    display:inline-block;
+    border: 1px solid transparent;
+    border-radius:50px;
+    height:45px;
+    line-height:53px;
+    text-align:center;
+    float:right;
+    margin-top: -45px;
+    margin-right: 30px;
+    font-size:20px;
+    position:relative;
+    
+}
+
+#container ul ul
+{
+    display:none;
+}
+    
+#container ul li:hover >ul{
+    color:#000;
+    background-color:white;
+display:block;}
+
+
+
+#container ul ul ul{
+    margin-left:150px;
+    top:0px;
+    position:absolute;
+}
+
+#container ul li a{
+    text-decoration: none;
+    color: #c50d0d;
+    font-family:cursive;
+    font-size:21px;
+    padding:5px 20px;
+    border: 1px solid transparent;
+    border-radius:20px;
+    transition: 0.6s ease;
+}
+
+#container ul li a:hover 
+{
+    background-color:white;
+    color:#000;
+}
+
+#container ul li.active a
+{
+    background-color:white;
+    color:#000;
+}
+
+.logo img{
+    float:left;
+    width:150px;
+    /*height:auto;*/
+    /*border-radius:70px;*/
+    position: absolute;
+        left: 54px;
+    top: 5px;
+}
+.main{
+max-width: 1300px;
+margin: auto;
+}
+
+body{
+    background-image: linear-gradient(rgb(135, 137, 176),rgba(16, 15, 15, -0.2)),url(green.png);
+height: 140vh;
+background-size: cover;
+background-position: center;
+}
+
+.EventUpload{
+
+width: 436px;
+padding: 8% 0 0;
+margin: auto;
+}
+
+.form{	
+z-index: 1;
+    background: rgb(71, 72, 72);
+    max-width: 436px;
+    /*margin: 79px 11px 103px;*/
+    margin-top:-50px; 
+    padding: 20px;
+    text-align: center;
+   height: 869px;
+}
+.form input{
+font-family:cursive;
+outline: 1;
+background: #f2f2f2;
+width: 80%;
+border: 0;
+margin: 0 0 15px;
+padding: 15px;
+box-sizing: 14px;
+font-size: 14px;
+}
+.form button{
+font-family: "Roboto",sans-serif;
+text-transform: uppercase;
+outline: 0;
+background: #4CAF50;
+width: 100%;
+border: 0;
+padding: 15px;
+color: #ffffff;
+font-size: 14px;
+cursor: pointer;
+border-radius:10px;
+}
+.form button:hover,.form button:active{
+background: #43A047; 
+border-radius: 1%;
+}
+
+.select{
+width:20%;
+}
+
+.states
+{
+        width: 346px;
+    height: 50px;
+
+}
+.col
+{
+    color: white;
+}
+.form h3
+{
+    color: white;
+}
+</style>
+<header>
+    <h1> CLEAN INDIA ICON</h1>
+<div class="main">
+<div class="logo">
+<img src="11.png">
+</div>
+
+ </div>
+<div id="container">
+        <ul>
+            
+            <li><a href="organise.html">Organise</a></li>
+            <li><a href="explore.php">Explore</a></li>
+            <li ><a href="home.html">Home</a></li>
+        </ul>
+        </div>
+
+
+</div>
+
+</header>
+
+
+<div class="EventUpload">
+<div class="form">
+<form class="EventUpload-form" action="organise.php" method="POST">
+<h3>Give Your Event Details</h3>
+<input type="text" name="Name" placeholder="Full Name" required />
+<input type="text" name="Phno" placeholder="Contact Number" required />
+<input type="text" name="Email" placeholder="Email Id" required />
+<input type="text" name="Eventname" placeholder="Event Name" required />
+<label><div class="col"> Choose Date for the Event : </label>
+<input type="date" name="Date" placeholder="Date" required />
+<label> Choose Time for the Event : </label>
+<input type="time" name="Time" placeholder="Time of the Event" required /></div>
+<select name="stateslist" class="states">
+<option value="">Select State</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Pondicherry">Pondicherry</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttaranchal">Uttaranchal</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="West Bengal">West Bengal</option>
+</select>
+<input type="text" name="City" placeholder="City" required />
+<input type="text" name="Venue" placeholder="Venue" required />
+<input type="file" name="logo" placeholder="Logo" />
+<input type="text" name="motive" placeholder="Describe your event in one line" />
+<input type="text" name="Details" placeholder="Details of the Event" required />
+<button>Submit</button>
+</form>
+</div>
+</div>
+</body>
+</html>
